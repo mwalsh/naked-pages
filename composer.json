@@ -1,0 +1,7 @@
+{
+    "require": {
+        "components/zepto": "^1.2",
+        "fortawesome/font-awesome": "^4.7",
+        "xinix-technology/naked-theme": "^0.1.1"
+    }
+}

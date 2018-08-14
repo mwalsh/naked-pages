@@ -9,9 +9,8 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
 
-    <link rel="stylesheet" href="<?php echo base('/bower_components/naked/css/naked.css') ?>">
-    <link rel="stylesheet" href="<?php echo base('/bower_components/font-awesome/css/font-awesome.min.css') ?>">
-    <link rel="stylesheet" href="<?php echo base('/bower_components/font-mfizz/font/font-mfizz.css') ?>">
+    <link rel="stylesheet" href="<?php echo base('/vendor/xinix-technology/naked-theme/www/vendor/css/naked.min.css') ?>">
+    <link rel="stylesheet" href="<?php echo base('/vendor/fortawesome/font-awesome/css/font-awesome.min.css') ?>">
     <link rel="shortcut icon" href="<?php echo base('/favicon.ico') ?>">
     <style>
         body { font-family: "Menlo", "Monaco", monospace; }
@@ -48,7 +47,7 @@
         </ul>
     </div>
 
-    <script type="text/javascript" src="<?php echo base('/bower_components/zeptojs/src/zepto.js') ?>"></script>
+    <script type="text/javascript" src="<?php echo base('/vendor/components/zepto/zepto.min.js') ?>"></script>
     <script type="text/javascript">
 
         $(function() {

@@ -10,11 +10,11 @@ someone who want a beauty yet light responsive web listing page. Or maybe **h5ai
 - Much more lighter than h5ai
 
 #Proof of Concept
-![PoC](https://github.com/krisanalfa/naked-pages/raw/master/poc/_nnn.png)
+![PoC](https://github.com/mwalsh/naked-pages/raw/master/poc/_nnn.png)
 
 #Installation (Apache)
 - Clone this repo to wherever you want
-- From command line, go to inside `naked-pages` folder and do `bower install` from there
+- From command line, go to inside `naked-pages` folder and do `composer install` from there
 - Link the `naked-pages` to somewhere accessible by your web server (inside your www root directory).
 
 ```sh
