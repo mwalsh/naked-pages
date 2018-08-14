@@ -4,52 +4,32 @@ naked-pages
 Default index listing (not only) for NGINX, and some custom error pages ;) This is good choice for
 someone who want a beauty yet light responsive web listing page. Or maybe **h5ai alternative**.
 
-#Features
-- Using our neat CSS framework - Naked!
+# Features
+- Uses the Naked CSS framework
 - Responsive page
-- Much more lighter than h5ai
+- Much lighter than h5ai
 
-#Proof of Concept
+# Proof of Concept
 ![PoC](https://github.com/mwalsh/naked-pages/raw/master/poc/_nnn.png)
 
-#Installation (Apache)
-- Clone this repo to wherever you want
-- From command line, go to inside `naked-pages` folder and do `composer install` from there
-- Link the `naked-pages` to somewhere accessible by your web server (inside your www root directory).
-
-```sh
-ln -s /full/path/to/naked-pages /path/to/www/root/[custom-folder]
-
-# for example
-ln -s /home/xinixman/naked-pages /var/www/_nnn
-```
-
-- Open your httpd configuration, find something like this:
+# Installation (Apache)
+- Clone this repo into your www root directory
+- From the command line, go into the `naked-pages` folder and run `composer install`
+- Create and open the `.htaccess` in your www root directory and add this line
 
 ```
-<IfModule dir_module>
-    DirectoryIndex index.html index.php
-</IfModule>
+DirectoryIndex index.php index.html /naked-pages/index.php
 ```
 
-Based on example, you should change them to:
+- To enable error pages, add these lines too
 
 ```
-<IfModule dir_module>
-    DirectoryIndex index.html index.php /_nnn
-</IfModule>
-```
-
-If you want to enable your own error page, find (and edit) or add this line to your `httpd.conf`
-
-```
-# Based on example
-ErrorDocument 404 /_nnn/404.php
-ErrorDocument 403 /_nnn/403.php
+ErrorDocument 404 /naked-pages/404.php
+ErrorDocument 403 /naked-pages/403.php
 ```
 
 # Configuration
-All config is only an array described in `config/config.php`. You can ignore listing your `naked-pages` directory
-by tell the config where you install your `naked-pages`. There you can also ignoring the folder/file based on you
-patterns, for example if you want to ignore `.DS_Store‎`, just add `.DS_Store‎` fo `fileExcludePatterns` entry. If you want
-to show folder / file size you can change `showSize` to `true`. Easy heh?
+All configuration is set in an array in `config/config.php`. You can ignore listing your `naked-pages` directory
+by telling the config where you installed your `naked-pages`. You can also ignore other files and folders using shell wildcard
+patterns. For example, if you want to ignore `.DS_Store‎`, just add `.DS_Store‎` to `fileExcludePatterns` entry. If you want
+to show folder / file size you can change `showSize` to `true`.
